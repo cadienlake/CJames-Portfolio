@@ -1,49 +1,209 @@
 /* wire frame: TODO: delete later */
-header,
+/* header,
 main,
 footer {
     border: 1px solid navy
-}
-
+} */
 
 /* reset */
+
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
-
 /* element selectors */
+
 body {
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
 }
 
 /* For Desktop */
-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-image: url(https://images.unsplash.com/photo-1554755229-ca4470e07232?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80);
 
+h1 {
+    margin: 0.25rem 0 1.5rem 0;
 }
 
-header,
-main,
-footer {
-    padding: 1.5rem;
+header {
+    background-color: cornflowerblue;
+    /* background-image: url(./images/BLKMARKET_COPYSCAN5.jpg);
+    background-size: cover; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: normal;
+    text-align: center;
 }
 
 main {
+    background-color: aliceblue;
     flex-grow: 1;
-    background-image: url(https://images.unsplash.com/photo-1650513248896-ae66deea01d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80);
 }
 
+nav {
+    font: 90 16px/60px 'Lato', sans-serif;
+    width: 66%;
+    margin: 0 auto 1rem auto;
+    background: aliceblue;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+nav ul {
+    height: 60px;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-right: 2.5rem;
+}
+
+nav ul li {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
+
+/* ANIMATIONS */
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+
+@keyframes anime {
+    from {
+        font-variation-settings: "wght" 800, "slnt" 0;
+        text-shadow: -5px 10px 0px #00e6e6, -10px 20px 0px #01cccc,
+            -15px 30px 0px #00bdbd;
+    }
+
+    to {
+        font-variation-settings: "wght" 300, "slnt" 15;
+        text-shadow: none;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
 /* classes */
-.pt {
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.centered {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+    display: flex;
+    min-height: 150px;
+    max-height: 100%;
+    flex-basis: calc(50% - 1em);
+    align-items: flex-end;
+    padding: 0 0 10px 0;
+    margin: 0.5em;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-repeat: no-repeat;
+}
+
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+
+}
+
+.flex-item:hover {
+    /* can change background color or whatever when cursor is over item. */
+}
+
+/* NAVBAR */
+.item-container {
+    top: 0;
+    position: relative;
+    height: 5rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.item-container:hover {
+    top: -60px;
+}
+
+.item-top,
+.item-bottom {
+    height: 60px;
+    position: relative;
+}
+
+.item-top {
+    color: #797979;
+}
+
+.item-bottom {
+    background: cornflowerblue;
+    color: #ffffff;
+}
+
+/* NAV BAR END */
+
+/* HEADER */
+.titletext {
+    font-family: "Recursive", monospace;
+    font-size: clamp(3em, 11.25vmin, 15em);
+    text-shadow: 0;
+    color: #fefae0;
+    animation: anime 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
+}
+
+/* HEADER END */
+
+.work-1 {
+    background-image: url("./images/Horiseon.png");
+    /* width: 100%;
+    height: 400px; */
+}
+
+.work-2 {
+    background-image: url("https://via.placeholder.com/200");
+}
+
+.work-3 {
+    background-image: url("https://via.placeholder.com/200");
+}
+
+.work-4 {
+    background-image: url("https://via.placeholder.com/200");
+}
+
+.work-5 {
+    background-image: url("https://via.placeholder.com/200");
+}
+
+.page-section {
     padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 920px) {
+    .titletext {
+        font-family: "Recursive", monospace;
+        font-size: clamp(2em, 7.5vmin, 10em);
+        text-shadow: 0;
+        color: #fefae0;
+        animation: anime 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
+    }
 }
