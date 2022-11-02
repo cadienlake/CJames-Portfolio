@@ -13,33 +13,33 @@
 <body>
     <!-- header -->
     <header>
-        <div class="centered">
+        <div class="center-max-width">
             <!--MY NAME -->
             <h1 class="titletext">Cadien Lake James</h1>
             <!-- NAV BAR -->
             <nav>
                 <div class="svg-wrapper">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="nav-animation-shape" height="60" width="320" />
+                    <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="nav-animation-shape" height="60" width="200" />
                     </svg>
                     <div class="nav-bar-text"><a href="#about">About</a></div>
                 </div>
                 <div class="svg-wrapper">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="nav-animation-shape" height="60" width="320" />
+                    <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="nav-animation-shape" height="60" width="200" />
                     </svg>
                     <div class="nav-bar-text"><a href="#work">Work</a></div>
                 </div>
                 <div class="svg-wrapper">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="nav-animation-shape" height="60" width="320" />
+                    <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="nav-animation-shape" height="60" width="200" />
                     </svg>
                     <div class="nav-bar-text"><a href="#contact">Contact</a></div>
                 </div>
             </nav>
             <!-- Portrait of Me -->
             <div>
-                <img src="./assets/css/images/Portrait of me.png" width="500px" class="center" alt="Portait of Me">
+                <img src="./assets/css/images/Portrait of me.png" width="500px" class="center-50" alt="Portait of Me">
             </div>
         </div>
     </header>
@@ -48,7 +48,10 @@
         <!-- about "short paragraph about me, and an image" -->
         <section id="about">
             <h2 class="titletextsmall">About</h2>
-            <p>My name is Cadien Lake Jack Henry James.</p>
+            <p class="center-66">My name is <em>Cadien Lake Jack Henry James</em>. Born and raised in Chicago, I write
+                songs, engineer and
+                produce records, design album covers, their layout, posters and shirts, and have just begun learning
+                full stack development. You can see my work in progress here. </p>
         </section>
 
 
@@ -56,43 +59,47 @@
         <section id="work" class="page-section ">
 
             <h2 class="titletextsmall">Homework</h2>
+
+
             <div class="flex-container">
-                <a href="#" class="flex-item work-1">
-                    <div>
-                        <h3>Homework 1</h3>
-                        <span>Horiseon comments</span>
-                    </div>
-                </a>
+                <a href="https://cadienlake.github.io/cjames-challenge-1/" class="flex-item work-1"
+                    alt="Picture of Horiseon website."">
+                    <div class=" work-text">
+                    <h3>Homework 1</h3>
+                    <span>Horiseon comments</span>
+            </div>
+            </a>
 
-                <a href="#" class="flex-item work-2">
-                    <div>
-                        <h3>Homework 2</h3>
-                        <span>tbd</span>
-                    </div>
-                </a>
+            <a href="#" class="flex-item work-2">
+                <div class="work-text">
+                    <h3>Homework 2</h3>
+                    <span>tbd</span>
+                </div>
+            </a>
 
-                <a href="#" class="flex-item work-3">
-                    <div>
-                        <h3>Homework 3</h3>
-                        <span>tbd</span>
-                    </div>
-                </a>
+            <a href="#" class="flex-item work-3">
+                <div class="work-text">
+                    <h3>Homework 3</h3>
+                    <span>tbd</span>
+                </div>
+            </a>
 
-                <a href="#" class="flex-item work-4">
-                    <div>
-                        <p>Challenge 4 <em>coming soon... </em> <br /><span class="small">I think...</span></p>
-                    </div>
-                </a>
+            <a href="#" class="flex-item work-4">
+                <div class="work-text">
+                    <h3>Homework 4</h3>
+                    <span>tbd</span>
+                </div>
+            </a>
 
-                <a href="#" class="flex-item work-5">
-                    <div>
-                        <h3>Homework 5</h3>
-                        <span>tbd</span>
-                    </div>
-                </a>
+            <a href="#" class="flex-item work-5">
+                <div class="work-text">
+                    <h3>Homework 5</h3>
+                    <span>tbd</span>
+                </div>
+            </a>
             </div>
         </section>
-
+`
         <!-- music production, engineering, and mixing -->
 
         <!-- graphic design -->
@@ -100,7 +107,10 @@
         <!-- contact info "git hub" -->
         <section id="contact" class="pt">
             <h2 class="titletextsmall">Contact</h2>
-            <a href="https://github.com/cadienlake">github</a>
+            <div class="contact">
+                <a href="mailto:cadienlake@gmail.com" class="contact-text">gmail</a>
+                <a href="https://github.com/cadienlake" class="contact-text">github</a>
+            </div>
         </section>
     </main>
     <!-- footer -->

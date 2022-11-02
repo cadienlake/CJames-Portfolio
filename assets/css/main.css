@@ -4,6 +4,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* ELEMENT SELECTORS */
@@ -19,7 +20,11 @@ body {
     /* flex-wrap: wrap; */
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+footer {
+    padding: 2rem;
 }
 
 h1 {
@@ -32,7 +37,8 @@ h2 {
     font-size: medium;
 }
 
-header {
+header,
+footer {
     background-color: dodgerblue;
     /* background-image: url(./images/BLKMARKET_COPYSCAN5.jpg);
     background-size: cover; */
@@ -59,6 +65,11 @@ nav {
     margin-top: 4rem;
 }
 
+/* p {
+    max-width: 66%;
+    text-align: center;
+} */
+
 section {
     border-bottom: dashed white;
 }
@@ -68,12 +79,15 @@ section {
 @import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
 
 @keyframes anime {
+
+    /* This shows the "shadows" that projext to the down and left of the title font */
     from {
         font-variation-settings: "wght" 800, "slnt" 0;
         text-shadow: -5px 10px 0px #00e6e6, -10px 20px 0px #01cccc,
             -15px 30px 0px #00bdbd;
     }
 
+    /* this shows the static font. */
     to {
         font-variation-settings: "wght" 300, "slnt" 15;
         text-shadow: none;
@@ -101,16 +115,36 @@ section {
 
 /* CLASSES */
 
-.center {
+.center-50 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
 
-.centered {
+.center-66 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+}
+
+.center-max-width {
     margin: 0 0 2rem 0;
-    /* max-width: 1200px; */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1330px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.contact-text:hover {
+    font-size: 1.2rem;
 }
 
 /* contains homework flex items */
@@ -148,12 +182,12 @@ section {
     /* can change background color or whatever when cursor is over item. */
 }
 
-/* regular shape for the draw animation on navbar */
+/* determines what part of the svg wrapper is scene before hovering */
 .nav-animation-shape {
     fill: transparent;
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
+    stroke-dasharray: 110 540;
+    stroke-dashoffset: -309;
+    stroke-width: 5px;
     stroke: #19f6e8;
 }
 
@@ -161,7 +195,7 @@ section {
 .nav-bar-text {
     color: #fff;
     font-family: 'Roboto Condensed';
-    font-size: 22px;
+    font-size: 1rem;
     letter-spacing: 8px;
     line-height: 32px;
     position: relative;
@@ -175,7 +209,7 @@ section {
 /* scalable vector graphic for navbar */
 .svg-wrapper {
     height: 60px;
-    margin: 0 auto;
+    margin: 5px auto;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -209,9 +243,12 @@ section {
 /* homework images and sizing */
 .work-1 {
     background-image: url("./images/Horiseon.png");
-    background-size: cover;
-    max-width: 66%;
+    background-size: contain;
+    background-position: center;
+    width: 66%;
+
 }
+
 
 .work-2 {
     background-image: url("https://via.placeholder.com/200");
@@ -241,6 +278,13 @@ section {
     max-width: 33%;
 }
 
+.work-text {
+    background-color: dodgerblue;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+    bottom: 25%;
+}
 
 @media screen and (max-width: 1000px) {
     .titletext {
