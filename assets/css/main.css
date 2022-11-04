@@ -139,8 +139,9 @@ section {
 .contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 1rem;
+    margin-bottom: 2rem;
 }
 
 .contact-text:hover {
